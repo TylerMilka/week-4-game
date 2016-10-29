@@ -13,7 +13,7 @@ $(document).ready(function(){
 //generate a number for each gem that when pressed gets 
 //added to the total score variable
 	
-	var $totalScore =$("#score");
+	var $Score =$("#score");
 	var score = 0;
 	var $redGem = $("#redGem");
 	var $blueGem = $("#blueGem");
@@ -23,18 +23,60 @@ $(document).ready(function(){
 $(document).ready(function() {
 	$("#redGem").mousedown(function() {
 		$("#redGem").height(+200);
-		$score= (score + 10).html;
-
-
-
-	});
+		$('#score').html(score + Math.floor(Math.random() * 20) + 1);
+		return
+		});
 		$("#redGem").mouseup(function(){
 			$("#redGem").height(+100);
 	});
 	});
 
+$(document).ready(function() {
+	$("#blueGem").mousedown(function() {
+		$("#blueGem").height(+200);
+		$('#score').html(score + Math.floor(Math.random() * 20) + 1);
+
+		return
+		});
+		$("#blueGem").mouseup(function(){
+			$("#blueGem").height(+100);
+	});
+	});
+
+$(document).ready(function() {
+	$("#yellowGem").mousedown(function() {
+		$("#yellowGem").height(+200);
+		$('#score').html(score + Math.floor(Math.random() * 20) + 1);
+		return
+		});
+		$("#yellowGem").mouseup(function(){
+			$("#yellowGem").height(+100);
+	});
+	});
+
+$(document).ready(function() {
+	$("#greenGem").mousedown(function() {
+		$("#greenGem").height(+200);
+		$('#score').html(score + Math.floor(Math.random() * 20) + 1);
+		return
+		});
+		$("#greenGem").mouseup(function(){
+			$("#greenGem").height(+100);
+	});
+	});
 ////generate a number for each gem that when pressed gets 
 //added to the total score variable
+
+	var $wins = $(0)
+	var $losses = 0;
+
+	$(document).ready(function(){
+
+		if (score > $randomNumber){
+			console.log("afdsdf");
+			losses + 1;
+		}
+	})
 
 
 
@@ -64,6 +106,7 @@ $(document).ready(function() {
 
 	//when clicked, each crystal will generate and display a
 	//unique number added to the total score display box 
+
 
 
 
